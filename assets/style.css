@@ -1,0 +1,22 @@
+body {
+  background-color: lightblue;
+}
+
+.aside {
+  position: fixed;
+  right: 0;
+  height: 100%;
+  background-color: lightcoral;
+  top: 0;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 33%;
+  border: 1px solid black;
+  text-align: center;
+}
