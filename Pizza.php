@@ -1,6 +1,5 @@
 <?php
 
-
 require_once('./Meal.php');
 
 class Pizza extends Meal{

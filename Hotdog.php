@@ -6,6 +6,7 @@ require_once('./Meal.php');
 class Hotdog extends Meal {
 
 	private $bread;
+	
 
 	function __construct($size, $bread) {
 		$this->size = $size;
@@ -35,4 +36,5 @@ class Hotdog extends Meal {
 }
 
 $hotdogDavid = new Hotdog("xl", 'toasté');
+$hotdogDavid->pay();
 

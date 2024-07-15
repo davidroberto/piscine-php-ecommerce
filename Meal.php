@@ -1,7 +1,7 @@
 <?php 
 
 
-class Meal {
+abstract class Meal {
 	protected $price;
 
 	protected $status;
