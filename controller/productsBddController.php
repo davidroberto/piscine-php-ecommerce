@@ -1,13 +1,12 @@
 <?php
 
-
 require_once('../config/config.php');
 
-// Préparer la requête d'insertion
+// Préparer la requête SQL
 $sql = "INSERT INTO product (titre, sous_titre, description) VALUES (:titre, :sous_titre, :description)";
 $stmt = $pdo->prepare($sql);
 
-// Définir les paramètres et exécuter
+// Définir les paramètres à remplacer avec leurs valeurs
 $titre = "Exemple de titre";
 $sous_titre = "Exemple de sous-titre";
 $description = "Ceci est une description d'exemple pour le produit.";
@@ -23,3 +22,8 @@ if ($stmt->execute()) {
 	echo "Erreur lors de l'ajout du produit";
 }
 
+
+// permet de faire une requête SELECT sans parametres
+//$stmt = $pdo->query("SELECT * FROM products");
+// retourne dans un tableau tous les produits 
+//$products = $stmt->fetch();
