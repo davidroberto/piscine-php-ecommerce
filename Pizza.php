@@ -1,11 +1,9 @@
 <?php
 
-class Pizza {
 
-	private $price;
+require_once('./Meal.php');
 
-	private $size;
-
+class Pizza extends Meal{
 	private $base;
 
 	private $ingredient1;
@@ -14,9 +12,6 @@ class Pizza {
 
 	private $ingredient3;
 
-	private $status;
-
-	private $orderedAt;
 
 	function __construct($size, $base, $ingredient1, $ingredient2, $ingredient3) {
 		$this->size = $size;
@@ -43,23 +38,6 @@ class Pizza {
 		if ($size === "xl") {
 			$this->price = 14;
 		} 
-	}
-
-
-	public function pay() {
-
-		if ($this->status === "en cours de commande") {
-			$this->status = "payé";
-		}
-
-	}
-
-
-	public function ship() {
-
-		if ($this->status === "payé") {
-			$this->status = "livré";
-		}
 	}
 
 	public function getIngredients() {
